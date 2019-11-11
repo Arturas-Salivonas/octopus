@@ -1,0 +1,155 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+
+::selection {
+  background-color: $pink-main;
+  color: $white;
+}
+
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.65;
+  font-family: $default-font-default;
+  color: $white;
+  background-color: $blue-bg;
+}
+a {
+  color: $pink-main;
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $default-font-bold;
+  line-height: initial;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  &.img-width {
+    width: 100%;
+    @include media-breakpoint-up(md) {
+      width: auto;
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+.blue-bg {
+  background-color: $blue-section;
+}
+
+.header-container {
+  padding: 1rem 0.5rem;
+  .header-navigation-container {
+    text-align: right;
+    svg {
+      fill: $white;
+    }
+  }
+}
+
+.product-section {
+  .product-section-info {
+    padding: 1rem 2rem;
+    .product-section-title-description {
+      color: $small-info;
+    }
+  }
+}
+
+.product-order-section {
+  padding: 2rem;
+  display: flex;
+  flex-flow: wrap;
+  text-align: center;
+  .product-order-section-price {
+    font-size: 1.5rem;
+    font-family: $default-font-bold;
+    display: flex;
+    align-items: end;
+    justify-content: flex-start;
+  }
+  .product-order-section-cta {
+    color: $white;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    font-family: $default-font-bold;
+    border-color: $pink-main;
+    background: linear-gradient(
+      to bottom,
+      $pink-secondary 1%,
+      $pink-secondary 50%,
+      $pink-main 51%,
+      $pink-main 100%
+    );
+    @include media-breakpoint-up(md) {
+      width: auto;
+    }
+    &:hover,
+    &:focus {
+      background: linear-gradient(
+        to bottom,
+        $pink-secondary 1%,
+        $pink-secondary 50%,
+        $pink-secondary 51%,
+        $pink-secondary 100%
+      );
+    }
+  }
+}
+
+.description-section {
+  padding: 2rem;
+}
+
+.specifications-section {
+  padding: 2rem;
+  ul {
+    display: flex;
+    flex-flow: wrap;
+    padding: 0;
+    li {
+      list-style: none;
+      flex: 50%;
+      line-height: 3;
+      border-bottom: 1px solid #00183c;
+    }
+  }
+}
+.performance-section {
+  padding: 2rem;
+  img {
+    padding-top: 1rem;
+  }
+}
+
+footer {
+  padding: 1rem;
+}
+
+@import "media"; // Always at the end
